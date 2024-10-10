@@ -1,1 +1,2 @@
-# Informatyka_programowanie
+# Informatyka_programowanie 
+Mateeusz Ligowski
