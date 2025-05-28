@@ -1,31 +1,29 @@
 #include <iostream>
 using namespace std;
-
-
 int GetNumberFromUser() {
-    int n;
-    cout << "Podaj liczbe: ";
-    cin >> n;
-    return n;
+int numerek;
+cout << "daj numer: ";
+cin >> numerek;
+	
+	return numerek;
+}
+int CalculateSumRecursive( int jedynka ) {
+  if ( jedynka == 1 ) 
+        return 1;
+    else
+	    return jedynka + CalculateSumRecursive(jedynka - 1);
+
 }
 
-
-int CalculateSumRecursive(int n) {
-    if (n == 1) {
-        return 1; 
-    } else {
-        return n + CalculateSumRecursive(n - 1); 
-    }
+int DisplayResult( int tak ) {
+  int wynik = tak;
+	return wynik;
 }
-
-
-void DisplayResult(int sum) {
-    cout << "Suma liczb od 1 do n wynosi: " << sum << endl;
-}
-
 int main() {
-    int n = GetNumberFromUser(); 
-    int sum = CalculateSumRecursive(n); 
-    DisplayResult(sum); 
-    return 0;
+int numerek = GetNumberFromUser();
+int jedynka = CalculateSumRecursive(numerek);
+int wynik = DisplayResult(jedynka);
+
+	cout << "suma liczb od 1 do " << numerek << " wynosi: " << wynik << endl;
+return 0;
 }
